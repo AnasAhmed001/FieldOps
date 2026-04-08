@@ -76,7 +76,7 @@ fieldops/
 │   │   └── useNotifications.ts
 │   ├── types/
 │   │   └── index.ts               ← shared TS interfaces (User, Job, etc.)
-│   ├── middleware.ts               ← Next.js route protection
+│   ├── proxy.ts               ← Next.js route protection
 │   ├── CLAUDE.md                  ← frontend-scoped Claude Code config
 │   ├── AGENTS.md
 │   ├── next.config.ts
@@ -94,7 +94,7 @@ fieldops/
 
 | Layer         | Choice                       | Reason                                             |
 |---------------|------------------------------|----------------------------------------------------|
-| Frontend      | Next.js 15.2.2 (App Router)  | SSR, file-based routing, single repo for all roles |
+| Frontend      | Next.js 16.2.2 (App Router)  | SSR, file-based routing, single repo for all roles |
 | React         | React 19.2.4                 | Latest stable, concurrent features                 |
 | Language      | TypeScript (strict)          | Type safety across components and API layer        |
 | UI            | shadcn/ui + Tailwind CSS v4  | Accessible, composable, no runtime overhead        |
