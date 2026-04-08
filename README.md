@@ -9,15 +9,28 @@ A Field Service Management platform for service jobs, technicians, and clients.
 - MongoDB Atlas cluster URL (or local MongoDB running)
 
 ### 2. Environment Variables
-In the `backend` directory, duplicate the example file:
+
+**Backend (`backend/.env`):**
+Duplicate the example file to create your local environment configuration:
 ```bash
 cp backend/.env.example backend/.env
 ```
-In the `frontend` directory, create a `.env.local` file:
+Ensure the following variables are configured in `backend/.env`:
+- `MONGO_URI`: Your MongoDB connection string (e.g., local or MongoDB Atlas).
+- `PORT`: The port the backend server will run on (default is 5000).
+- `FRONTEND_URL`: The URL of the frontend application (usually `http://localhost:3000`).
+- `JWT_SECRET`: A secure, random string used for signing access tokens.
+- `JWT_REFRESH_SECRET`: A secure, random string used for signing refresh tokens.
+- `JWT_EXPIRES_IN`: Expiration time for access tokens (e.g., `15m`).
+- `JWT_REFRESH_EXPIRES_IN`: Expiration time for refresh tokens (e.g., `7d`).
+
+**Frontend (`frontend/.env.local`):**
+Duplicate the example file to create your local environment configuration:
 ```bash
 cp frontend/.env.example frontend/.env.local
 ```
-*(Make sure to populate `MONGO_URI` in the backend `.env` file.)*
+Ensure the following variable is configured in `frontend/.env.local`:
+- `NEXT_PUBLIC_API_URL`: The URL pointing to your backend API (usually `http://localhost:5000/api`).
 
 ### 3. Install Requirements
 ```bash
